@@ -1,0 +1,115 @@
+{
+  "customers": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "jdoe@gmail.com",
+      "age": 35
+    },
+    {
+      "id": "2",
+      "name": "Steve Smith",
+      "email": "steve@gmail.com",
+      "age": 25
+    },
+    {
+      "id": "3",
+      "name": "Sara Williams",
+      "email": "sara@gmail.com",
+      "age": 32
+    },
+    {
+      "name": "Sushant",
+      "email": "sushant2009@gmail.com",
+      "age": "35",
+      "id": "vBUKQA7"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "sushant",
+      "password": "jadhav"
+    },
+    {
+      "id": "2",
+      "username": "akash",
+      "password": "shinde"
+    },
+    {
+      "id": "3",
+      "username": "gopal",
+      "password": "nichal"
+    },
+    {
+      "id": "4",
+      "username": "tushar",
+      "password": "chavan"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "1",
+      "name": "room 1",
+      "questions": [
+        {
+          "id": "1",
+          "question": "Is prime minster of india Narendra Modi?",
+          "answer": "true"
+        },
+        {
+          "id": "2",
+          "question": "Capital of India?",
+          "answer": "Delhi"
+        },
+        {
+          "id": "3",
+          "question": "Indias flag name?",
+          "answer": "Tricolor"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "room 2",
+      "questions": [
+        {
+          "id": "1",
+          "question": "Indias longes river?",
+          "answer": "Ganga"
+        },
+        {
+          "id": "2",
+          "question": "Indais tallest Minar",
+          "answer": "Kutub Minar"
+        },
+        {
+          "id": "3",
+          "question": "When India got freedom",
+          "answer": "1947"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "room 3",
+      "questions": [
+        {
+          "id": "1",
+          "question": "Indias smallest state?",
+          "answer": "Goa"
+        },
+        {
+          "id": "2",
+          "question": "Indias first bullet train?",
+          "answer": "Mumbai-Ahamdabad"
+        },
+        {
+          "id": "3",
+          "question": "Indias first Metro?",
+          "answer": "Delhi"
+        }
+      ]
+    }
+  ]
+}
