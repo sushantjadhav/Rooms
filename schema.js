@@ -11,29 +11,22 @@ const {
   GraphQLNonNull,
 } = require("graphql");
 
-// Hard coded data
-// const customers = [
-//   { id: "1", name: "John Doe", email: "jdoe@gmail.com", age: 35 },
-//   { id: "2", name: "Steve Smith", email: "steve@gmail.com", age: 25 },
-//   { id: "3", name: "Sara Williams", email: "sara@gmail.com", age: 32 },
-// ];
-
 const UserType = new GraphQLObjectType({
   name: "users",
-  fields: () => ({
+  fields: {
     id: { type: GraphQLString },
     username: { type: GraphQLString },
     password: { type: GraphQLString },
-  }),
+  },
 });
 
 const QuestionType = new GraphQLObjectType({
   name: "questions",
-  fields: () => ({
+  fields: {
     id: { type: GraphQLString },
     question: { type: GraphQLString },
-    password: { type: GraphQLString },
-  }),
+    answer: { type: GraphQLString },
+  },
 });
 
 const RoomType = new GraphQLObjectType({
@@ -126,12 +119,31 @@ const mutation = new GraphQLObjectType({
       args: {
         id: { type: new GraphQLNonNull(GraphQLString) },
         name: { type: new GraphQLNonNull(GraphQLString) },
-        //questions: { type: new GraphQLList({}) },
       },
       resolve(parentValue, args) {
-        return this.axios
+        console.log("args:: ", args);
+        return axios
           .post("http://localhost:3000/rooms/", args)
           .then((responce) => response.data);
+      },
+    },
+
+    addQuestions: {
+      type: new GraphQLList(QuestionType),
+      args: {
+        roomId: { type: GraphQLString },
+        id: { type: GraphQLString },
+        question: { type: GraphQLString },
+        answer: { type: GraphQLString },
+      },
+      respolve(parentValue, args) {
+        return axios
+          .post(`http://localhost:3000/rooms/${args.roomId}/`, {
+            id: args.id,
+            question: args.question,
+            answer: args.answer,
+          })
+          .then((response) => response.data);
       },
     },
 

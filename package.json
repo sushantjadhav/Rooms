@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:server": "nodemon server.js",
-    "json:server": "json-server --watch data.json"
+    "dev:server": "nodemon index.js",
+    "json:server": "json-server --watch FakeData.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apollo-server-express": "^2.22.2",
     "axios": "^0.21.1",
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
